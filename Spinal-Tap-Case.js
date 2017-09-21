@@ -9,7 +9,7 @@ function spinalCase(str) {
 
     //find the lowercase characters which are immediately followed by uppercase characters and add a space
     var result = str.replace(/[a-z](?=[A-Z])/g, (e, i) => str[i] + ' ');
-    return result.replace(/[_ -]/g,'-').toLowerCase();
+    return result.replace(/[_ ]/g,'-').toLowerCase();
 }
 
 console.log(spinalCase("This Is Spinal Tap")); // should return "this-is-spinal-tap".
